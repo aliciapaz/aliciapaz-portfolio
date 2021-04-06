@@ -3811,9 +3811,6 @@ sup {
   }
 }
 .header-links {
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 1rem;
   margin: 10px;
 }
 .header-links .link {
@@ -3950,6 +3947,32 @@ sup {
   #projects {
     width: 80%;
   }
+}
+.project {
+  position: relative;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+  cursor: pointer;
+  margin: 1em;
+}
+.project:hover .project-overlay {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.project-overlay {
+  z-index: 10;
+  display: none;
+  background: rgba(51, 51, 51, 0.5);
+  height: 100%;
+}
+.project-one {
+  background-image: url(../img/librarian_bot.png);
+  background-size: cover;
+  height: 60vh;
+  width: 50%;
 }
 
 .footer {

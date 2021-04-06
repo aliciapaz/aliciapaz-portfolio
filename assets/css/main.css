@@ -52,6 +52,9 @@ b,
 strong {
   font-weight: bolder;
 }
+h1 {
+  font-weight: lighter;
+}
 dfn {
   font-style: italic;
 }
@@ -3808,6 +3811,9 @@ sup {
   }
 }
 .header-links {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 1rem;
   margin: 10px;
 }
 .header-links .link {
@@ -3815,6 +3821,7 @@ sup {
   text-decoration: none;
   font-size: 15px;
   margin: 10px;
+  transition: all 0.5s;
 }
 @media only screen and (min-width: 550px) {
   .header-links .link {
@@ -3840,7 +3847,9 @@ sup {
   margin: 5px;
 }
 .header-icons .icon:active,
-.header-icons .icon:hover {
+.header-icons .icon:hover,
+.header-links .link:active,
+.header-links .link:hover {
   color: #0d335d;
 }
 @media only screen and (min-width: 550px) {
@@ -3926,10 +3935,9 @@ sup {
 }
 @media only screen and (min-width: 550px) {
   .user-description {
-    margin: 4em 0
+    margin-top: 4em
   }
 }
-
 #projects {
   display: flex;
   flex-direction: column;
@@ -3943,74 +3951,9 @@ sup {
     width: 80%;
   }
 }
-.user-projects {
-  margin: 20px auto;
-}
-.user-projects img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-.user-projects h5,
-body {
-  margin: 0;
-}
-.user-projects li {
-  color: #1a222c;
-  font-size: 1.1rem;
-}
-.user-projects p {
-  margin-right: 5px;
-}
-@media only screen and (min-width: 550px) {
-  .contents {
-    margin-left: 0;
-    width: 48%;
-  }
-  .contents-right {
-    margin-top: -5%;
-  }
-  .contents-right,
-  .images-right {
-    float: right;
-    width: 48%;
-  }
-  .images-right img {
-    float: right;
-  }
-  .images-left {
-    float: left;
-    width: 48%;
-  }
-  .images-left img {
-    float: left;
-  }
-}
-.project-link {
-  display: inline-block;
-  margin: 10px 0;
-  padding: 5px;
-  color: #1a222c;
-  background-color: transparent;
-  border: 1px solid #1a222c;
-  border-radius: 10px;
-  text-align: center;
-  outline: 0;
-  text-decoration: none;
-  cursor: pointer;
-  transition: color 0.3s ease-out, background-color 0.3s ease-out,
-    border-color 0.3s ease-out;
-}
-.project-link:active,
-.project-link:hover {
-  background-color: #54516a;
-  border-color: #54516a;
-  color: #fff;
-  transition: color 0.3s ease-in, background-color 0.3s ease-in,
-    border-color 0.3s ease-in;
-}
+
 .footer {
-  background: #1a222c;
+  background: #0a043c;
   padding: 10px 0;
   margin-top: 100px;
   text-align: center;

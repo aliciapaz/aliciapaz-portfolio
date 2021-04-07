@@ -1,7 +1,7 @@
 <h1>Featured projects</h1>
 <div class="projects-container">
   {% for project in site.data.settings.projects %}
-  <a href="{{ project.file }}">
+  <a href="{{ project.permalink }}">
     <div
       class="project"
       data-folder="{{ site.github.url }}/projects/{{ project.folder }}"

@@ -4011,14 +4011,24 @@ sup {
 }
 
 .footer {
-  display: flex;
-  justify-content: space-between;
+  max-width: 100%;
+  overflow: hidden;
   background: #0a043c;
-  padding: 10px 400px;
-  margin-top: 100px;
   text-align: center;
   color: #fff;
   font-size: 80%;
+}
+.footer-content {
+  max-width: 60%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 550px) {
+  .footer-content {
+    max-width: 90%;
+    flex-direction: column;
+  }
 }
 .footer-links {
   padding-top:1rem;

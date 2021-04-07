@@ -407,10 +407,12 @@ a img {
   color: #4b5664;
 }
 
-#about {
+#about,
+#contact {
   width: 90%;
   margin: 0 auto;
   max-width: 960px;
+  text-align: center;
 }
 
 @media only screen and (min-width: 550px) {
@@ -439,25 +441,12 @@ a img {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.user p {
-  font-size: 16px;
+  justify-content: space-around;
 }
 
 @media only screen and (max-width: 550px) {
   .user {
     flex-direction: column;
-  }
-}
-
-@media only screen and (min-width: 550px) {
-  .user {
-    flex-wrap: nowrap;
-    font-size: 90px;
-    width: 70vw;
-    margin: 0 -25%;
   }
 }
 
@@ -541,6 +530,17 @@ a img {
   text-align: center;
   font-weight: bolder;
   padding: 2rem;
+}
+
+.contact-links .link {
+  text-decoration: none;
+  transition: all 0.5s;
+  font-weight: bold;
+  color: #555
+}
+
+.contact-links .link:hover {
+  color:rgb(10, 4, 60)
 }
 
 .footer {

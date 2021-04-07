@@ -235,6 +235,7 @@ strong {
   padding-top: 1em;
   line-height: 1.25;
   color: #333;
+  font-weight: lighter;
 }
 
 h2 {
@@ -544,7 +545,7 @@ a img {
 }
 
 .footer {
-  max-width: 100%;
+  width: 100vw;
   overflow: hidden;
   background: #0a043c;
   text-align: center;
@@ -577,6 +578,13 @@ a img {
   text-decoration: none;
   margin: 0;
   color: #fff;
+}
+
+.page-flex-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /*!

@@ -4,9 +4,11 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include head.html %}
-  <body>
-    {% include page_header.html %}
-    <h2>{{ page.title }}</h2>
+  <body class='page-flex-wrapper'>
+    <div>
+      {% include page_header.html %}
+      <h2>{{ page.title }}</h2>
       {{ content }}
+    </div>
       {% include footer.html %}
   </body>

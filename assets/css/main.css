@@ -3917,12 +3917,17 @@ sup {
 .user p {
   font-size: 16px;
 }
+@media only screen and (max-width: 550px) {
+  .user {
+    flex-direction: column;
+  }
+}
 @media only screen and (min-width: 550px) {
   .user {;
     flex-wrap: nowrap;
     font-size: 90px;
     width: 70vw;
-    margin: 0 -20%;
+    margin: 0 -25%;
   }
 }
 .user-details {
@@ -3953,6 +3958,11 @@ sup {
     display: grid;
     grid-template-columns: 45% 45%;
     column-gap: 20px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .projects-container {
+    display: column;
   }
 }
 .project {
@@ -4001,14 +4011,19 @@ sup {
 }
 
 .footer {
+  display: flex;
+  justify-content: space-between;
   background: #0a043c;
-  padding: 10px 0;
+  padding: 10px 400px;
   margin-top: 100px;
   text-align: center;
   color: #fff;
+  font-size: 80%;
 }
-.footer .love {
-  color: red;
+.footer-links {
+  padding-top:1rem;
+  display: flex;
+  flex-direction: column;
 }
 .footer a {
   text-decoration: none;

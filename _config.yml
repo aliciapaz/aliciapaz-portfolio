@@ -2,7 +2,7 @@
 title: Alicia Rojas
 description: Alicia Rojas' portfolio
 # baseurl: "/particle" # the subpath of your site, e.g. /blog
-# url: "localhost:3000" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+url: "localhost:4000" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 
 # User settings
 username: Alicia Rojas
@@ -16,5 +16,8 @@ linkedin_username: aliciapazrojas
 # Google-analytics
 google-analytics:
   id: "G-CMRKBGSF7J"
+
+# Building 
+markdown: kramdown
 
 exclude: ['package.json', 'src' , 'node_modules']

@@ -7,8 +7,10 @@
   <body class='page-flex-wrapper'>
     <div>
       {% include page_header.html %}
-      <h2>{{ page.title }}</h2>
-      {{ content }}
+      <div class="page-content">
+        <h2>{{ page.title }}</h2>
+        {{ content }}
+      </div>
     </div>
       {% include footer.html %}
   </body>

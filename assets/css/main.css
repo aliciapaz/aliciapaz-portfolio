@@ -3964,23 +3964,24 @@ sup {
   width: 100%;
 }
 .project:hover .project-overlay {
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  background: rgba(10, 4, 60, 0.9);
 }
 .project:hover .project-snippet {
   display: block;
 }
 .project-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
   z-index: 10;
-  display: none;
-  background: rgba(10, 4, 60, 0.9);
+  display: block;
+  background: rgba(10, 4, 60, 0);
   height: 100%;
-  
+  transition: all 0.5s;
 }
+
 .project-snippet {
   display: none;
   color: #fff;

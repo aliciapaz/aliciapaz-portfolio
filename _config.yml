@@ -3,6 +3,7 @@ title: Alicia Rojas
 description: Alicia Rojas' portfolio
 # baseurl: "/particle" # the subpath of your site, e.g. /blog
 url: "https://www.aliciarojas.me/"
+github: [metadata]
 
 # User settings
 username: Alicia Rojas
@@ -17,7 +18,8 @@ linkedin_username: aliciapazrojas
 google-analytics:
   id: "G-CMRKBGSF7J"
 
-# Building 
-markdown: kramdown
+# Build settings 
+kramdown:
+  input: GFM
 
 exclude: ['package.json', 'src' , 'node_modules']

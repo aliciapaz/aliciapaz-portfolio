@@ -1,18 +1,18 @@
 <div class="projects-container">
-    <div class='project' style="background-image: url(../assets/img/{{ include.image }})">
+    <div class='project project-btn' style="background-image: url(../assets/img/{{ include.image }})">
       <a href="{{ include.url }}" target="_blank">
-      <div class="project-overlay">
-        <div class="project-snippet">
+      <div class="project-overlay btn-overlay">
+        <div class="project-snippet btn-snippet">
             View Demo <i class="fa fa-arrow-right" aria-hidden="true"></i>
         </div>
       </div>
     </a>
     </div>
     {% if include.github %}
-    <div class='project' style="background-image: url(../assets/img/github.png)">
+    <div class='project project-btn github-btn' style="background-image: url(../assets/img/github.png)">
       <a href="{{ include.github }}" target="_blank">
-      <div class="project-overlay">
-        <div class="project-snippet">
+      <div class="project-overlay btn-overlay">
+        <div class="project-snippet btn-snippet">
             Source Code <i class="fa fa-arrow-right" aria-hidden="true"></i>
         </div>
       </div>

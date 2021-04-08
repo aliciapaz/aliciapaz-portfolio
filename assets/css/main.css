@@ -525,6 +525,7 @@ a img {
   z-index: 10;
   display: flex;
   align-items: center;
+  justify-content: center;
   background: rgba(10, 4, 60, 0);
   height: 100%;
   transition: all 0.5s;
@@ -539,6 +540,25 @@ a img {
   text-align: center;
   font-weight: bolder;
   padding: 0 0.8rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .project-btn {
+    height: 8rem;
+    margin: 0.2rem;
+    background
+  }
+  .github-btn {
+    background-position: 50%;
+    height: 4rem;
+    background-position: 50% 13%;
+  }
+  .btn-overlay {
+    background: linear-gradient(rgba(0,0,0,0), rgba(10, 4, 60, 0.7)) ;
+  }
+  .btn-snippet {
+    display: block;
+  }
 }
 
 .contact-links .link {
@@ -602,8 +622,7 @@ a img {
 .page-content {
   text-align: justify;
   text-justify: inter-word;
-  width: 90%;
-  max-width: 50vw;
+  width: 80%;
   margin: 0 auto;
 }
 

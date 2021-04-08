@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 'Fritz the Librarian Bot'
-permalink: '/librarian_bot'
+permalink: /librarian_bot/
 ---
 
 Fritz is a Telegram bot built with Ruby.

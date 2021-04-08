@@ -15,7 +15,7 @@
 Okay, I know is a bit weird to contribute to someone's portfolio (or is it?), but perhaps you found a bug on my website and because you're a nice person you'd like to report it.
 For these or any other contributions, please visit the [issues page](https://github.com/aliciapaz/aliciapaz-portfolio/issues) :bug:
 
-## Acknolwedgements
+## Acknowledgements
 
 My portfolio is inspired by the work of these fine folks:
 

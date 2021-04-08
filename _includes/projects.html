@@ -1,10 +1,10 @@
 <h1>Featured projects</h1>
 <div class="projects-container">
   {% for project in site.data.settings.projects %}
-  <a href="{{ project.file }}">
+  <a href="{{ project.permalink }}">
     <div
       class="project"
-      data-folder="/projects/{{ project.folder }}"
+      data-folder="{{ site.github.url }}/projects/{{ project.folder }}"
       style="background-image: url(../assets/img/projects/{{ project.folder }}/thumb.png)"
     >
       <div class="project-overlay">

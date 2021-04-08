@@ -1,0 +1,24 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+      {% include header.html %}
+      <section id="projects">
+        {% include projects.html %}
+      </section>
+      <section id="about">
+        {% include about.html %}
+      </section>
+      <section id="contact">
+        {% include contact.html %}
+      </section>
+        {{ content }}
+      {% include footer.html %}
+      <script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+      <script src="{{ "/assets/js/sweet-scroll.min.js" | prepend: site.baseurl }}"></script>
+      <script src="{{ "/assets/js/main.js" | prepend: site.baseurl }}"></script>
+      {% include google-analytics.html %}
+  </body>

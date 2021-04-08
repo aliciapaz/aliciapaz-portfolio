@@ -1,0 +1,18 @@
+<h1>Featured projects</h1>
+<div class="projects-container">
+  {% for project in site.data.settings.projects %}
+  <a href="{{ project.permalink }}">
+    <div
+      class="project"
+      data-folder="/projects/{{ project.folder }}"
+      style="background-image: url(../assets/img/projects/{{ project.folder }}/thumb.png)"
+    >
+      <div class="project-overlay">
+        <p class="project-snippet">{{ project.description }}</br></br>
+          See project <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </p>
+      </div>
+    </div>
+  </a>
+  {% endfor %}
+</div>

@@ -1,0 +1,22 @@
+<div class="projects-container">
+    <div class='project' style="background-image: url(../assets/img/{{ include.image }})">
+      <a href="{{ include.url }}" target="_blank">
+      <div class="project-overlay">
+        <div class="project-snippet">
+            View Demo <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </div>
+      </div>
+    </a>
+    </div>
+    {% if include.github %}
+    <div class='project' style="background-image: url(../assets/img/github.png)">
+      <a href="{{ include.github }}" target="_blank">
+      <div class="project-overlay">
+        <div class="project-snippet">
+            Source Code <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </div>
+      </div>
+    </a>
+    </div>
+    {% endif %}
+</div>

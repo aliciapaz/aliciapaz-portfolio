@@ -585,6 +585,10 @@ a img {
   color: #fff;
 }
 
+.navbar .link {
+  padding: 2rem 0 0 1.5rem;
+}
+
 .page-flex-wrapper {
   display: flex;
   min-height: 100vh;

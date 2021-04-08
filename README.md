@@ -1,10 +1,10 @@
 # Alicia Rojas' Portfolio
-> This is where the magic behind my portfolio happens.  
+> This is where the magic behind my portfolio happens. Feel free to explore the code and contribute. 
 
 ## Built with
 
-- Jekyll. An open source  static-site-generator 
-- [Particle](https://github.com/VincentGarreau/particles.js). A javascript library for creating particles :atom:
+- [Jekyll](https://github.com/jekyll/jekyll). An open source static site generator.
+- [Particle](https://github.com/VincentGarreau/particles.js). A javascript library for creating particles.
 
 ## Deployment
 
@@ -12,14 +12,13 @@
 
 ## Contributions
 
-Okay, I know is a bit weird to contribute to someone's portfolio, but maybe you found a bug on my website and because you're a nice and generous person you'd like to report it.
-If that's the case, please visit the [issues page](https://github.com/aliciapaz/aliciapaz-portfolio/issues) :)
-If not, feel free to visit it anyway.
+Okay, I know is a bit weird to contribute to someone's portfolio (or is it?), but perhaps you found a bug on my website and because you're a nice person you'd like to report it.
+For these or any other contributions, please visit the [issues page](https://github.com/aliciapaz/aliciapaz-portfolio/issues) :bug:
 
 ## Acknolwedgements
 
 My portfolio is inspired by the work of these fine folks:
 
-[Vincent Garreau](https://github.com/VincentGarreau)
-[Nathan Randecker](https://github.com/nrandecker)
-[Paul Le](https://github.com/LeNPaul)
+- [Vincent Garreau](https://github.com/VincentGarreau)
+- [Nathan Randecker](https://github.com/nrandecker)
+- [Paul Le](https://github.com/LeNPaul)

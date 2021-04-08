@@ -523,7 +523,8 @@ a img {
   right: 0;
   left: 0;
   z-index: 10;
-  display: block;
+  display: flex;
+  align-items: center;
   background: rgba(10, 4, 60, 0);
   height: 100%;
   transition: all 0.5s;
@@ -531,11 +532,13 @@ a img {
 }
 
 .project-snippet {
+  box-sizing: border-box;
+  margin: 0;
   display: none;
   color: #fff;
   text-align: center;
   font-weight: bolder;
-  padding: 2rem;
+  padding: 0 0.8rem;
 }
 
 .contact-links .link {

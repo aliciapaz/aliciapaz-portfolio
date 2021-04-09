@@ -11,4 +11,4 @@ The site uses Posgres as the main database.
 
 The project is deployed on Heroku and available as a Live Demo, check it out on the link below. Feel free to explore the code on GitHub as well.
 
-{% include image.html url="https://warm-earth-97805.herokuapp.com/" image="projects/proj-2/outdoor-mockup.jpg" github='https://github.com/aliciapaz/outdoor-blog'%}
+{% include image.html url="https://sheltered-brushlands-75247.herokuapp.com/" image="projects/proj-2/outdoor-mockup.jpg" github='https://github.com/aliciapaz/outdoor-blog'%}

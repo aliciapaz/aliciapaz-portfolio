@@ -12,4 +12,4 @@ The app is deployed on GitHub Pages.
 
 Check out the Live Demo or source code below! 
 
-{% include image.html url="https://aliciapaz.github.io/my-moms-kitchen/" image="projects/proj-1/librarian_mockup.jpg" github='https://github.com/aliciapaz/my-moms-kitchen'%}
+{% include image.html url="https://aliciapaz.github.io/my-moms-kitchen/" image="projects/proj-3/thumb.png" github='https://github.com/aliciapaz/my-moms-kitchen'%}

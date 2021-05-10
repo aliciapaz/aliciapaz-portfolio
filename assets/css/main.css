@@ -511,12 +511,6 @@ a img {
   background-repeat: no-repeat;
 }
 
-@media only screen and (max-width: 768px) {
-  .project {
-    height: 7rem;
-  }
-}
-
 .project:hover .project-overlay {
   background: rgba(10, 4, 60, 0.9);
 }
@@ -633,6 +627,10 @@ a img {
   text-justify: inter-word;
   width: 80%;
   margin: 0 auto;
+}
+
+.page-content h2 {
+  text-align: left;
 }
 
 /*!

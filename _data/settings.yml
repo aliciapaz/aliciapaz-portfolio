@@ -24,3 +24,11 @@ projects:
       file: "projects/my_moms_kitchen.html",
       permalink: 'my_moms_kitchen',      
     }
+
+  - {
+      name: "BuscoLuthier",
+      description: "A front-end design for a directory of luthiers' website.",
+      folder: "proj-4",
+      file: "projects/buscoluthier.html",
+      permalink: 'buscoluthier',
+    }

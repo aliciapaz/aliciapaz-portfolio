@@ -2,7 +2,7 @@
 
 projects:
   - {
-      name: "Project One",
+      name: "Fritz the Librarian",
       description: "A Telegram bot built with Ruby that recommends books of a chosen genre and sends quotes according to the user's mood.",
       folder: "proj-1",
       file: "projects/librarian_bot.html",
@@ -15,4 +15,12 @@ projects:
       folder: "proj-2",
       file: "projects/outdoor_blog.html",
       permalink: '/outdoor_blog/',
+    }
+
+  - {
+      name: "My Mom's Kitchen",
+      description: "A single-page-app built with JavaScript to show my favorite dishes made by my mom.",
+      folder: "proj-3",
+      file: "projects/my_moms_kitchen.html",
+      permalink: 'my_moms_kitchen',      
     }

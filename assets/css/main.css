@@ -330,6 +330,7 @@ a img {
 .header-links .link {
   color: #fff;
   text-decoration: none;
+  white-space: nowrap;
   font-size: 15px;
   margin: 10px;
   transition: all 0.5s;
@@ -484,6 +485,7 @@ a img {
     display: grid;
     grid-template-columns: 50% 50%;
     column-gap: 30px;
+    row-gap: 30px;
   }
 }
 
@@ -507,6 +509,12 @@ a img {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 768px) {
+  .project {
+    height: 7rem;
+  }
 }
 
 .project:hover .project-overlay {

@@ -18,11 +18,11 @@ projects:
     }
 
   - {
-      name: "My Mom's Kitchen",
-      description: "A single-page-app built with JavaScript to show my favorite dishes made by my mom.",
+      name: "Beetle Rush",
+      description: "An endless runner game built with Phaser 3 that makes a dung beetle run through the forest while collecting manure and avoiding predators.",
       folder: "proj-3",
-      file: "projects/my_moms_kitchen.html",
-      permalink: 'my_moms_kitchen',      
+      file: "projects/beetle_rush.html",
+      permalink: 'beetle_rush',      
     }
 
   - {

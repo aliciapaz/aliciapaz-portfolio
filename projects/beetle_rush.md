@@ -12,4 +12,4 @@ It's built with Phaser 3 and I used Webpack as the module bundler. It's currentl
 
  Check out the Live Demo or source code below! 
 
-{% include image.html url="https://optimistic-thompson-062a68.netlify.app/" image="projects/proj-3/thumb.png" github='https://github.com/aliciapaz/beetle-rush'%}
+{% include image.html url="https://adoring-goldstine-1746f4.netlify.app/" image="projects/proj-3/thumb.png" github='https://github.com/aliciapaz/beetle-rush'%}

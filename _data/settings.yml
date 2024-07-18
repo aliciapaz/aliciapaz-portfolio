@@ -9,7 +9,7 @@ menu:
 - {name: 'Sobre mí',   url: 'about'}
 - {name: 'Música', url: 'music'}
 - {name: 'Software', url: 'software'}
-# - {name: 'Blog', url: 'blog'}
+- {name: 'Blog', url: 'blog'}
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
 social:

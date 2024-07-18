@@ -1,6 +1,7 @@
 # Change 'comments' to true for Disqus comments
 disqus:
   comments: false
+  disqus_shortname: 'https-lenpaul-github-io-lagrange'
 
 # If you are not using Google Analytics, please change 'google-ID' to an empty string
 google-ID: ''
@@ -9,7 +10,7 @@ menu:
 - {name: 'Sobre mí',   url: 'about'}
 - {name: 'Música', url: 'music'}
 - {name: 'Software', url: 'software'}
-- {name: 'Blog', url: 'blog'}
+# - {name: 'Blog', url: 'blog'}
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
 social:
@@ -21,11 +22,11 @@ social:
 
 # Customize site text
 pagination:
-  next_page: 'Más antiguo'
-  previous_page: 'Más nuevo'
+  next_page: 'Newer'
+  previous_page: 'Older'
 
-sharing_button_prompt: 'Compartir'
+sharing_button_prompt: 'Feel free to share!'
 
-related_posts: 'También te podría interesar:'
+related_posts: 'You may also enjoy:'
 
-post_date_prefix: 'Escrito el'
+post_date_prefix: 'Written on'

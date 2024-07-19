@@ -11,3 +11,9 @@ Soy ávida usuaria y contribuyo esporádicamente a proyectos de código abierto 
 
 
 En 2020 tuve un breve romance con el desarrollo de juegos en HTML5. Si estás en un computador de escritorio, puedes ayudar a un escarabajo pelotero a ser feliz <a href="https://adoring-goldstine-1746f4.netlify.app/" target="_blank">aquí</a>.
+
+Ocasionalmente hago sitios web sencillos y portafolios (como este) de manera independiente.
+
+Antes internet era un lugar divertido, pero luego apareció el "scrolling", el "swiping", los avisos de cookies y los ataques de pánico.
+<br>
+Por eso en mis proyectos personales, más que desarrollo web, hago artesanía y jardinería.

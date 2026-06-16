@@ -31,4 +31,16 @@
   {% include google-analytics.html %}
   <!-- Use Jekyll SEO plugin -->
   {% seo %}
+  {% comment %} Bilingual hreflang alternates {% endcomment %}
+  {% if site.active_lang %}
+    {% assign neutral_url = page.url | remove_first: '/en' %}
+    {% for lang in site.languages %}
+      {% if lang == site.default_lang %}
+        <link rel="alternate" hreflang="{{ lang }}" href="{{ neutral_url | absolute_url }}" />
+      {% else %}
+        {% capture lang_url %}/{{ lang }}{{ neutral_url }}{% endcapture %}
+        <link rel="alternate" hreflang="{{ lang }}" {% static_href %}href="{{ lang_url | absolute_url }}"{% endstatic_href %} />
+      {% endif %}
+    {% endfor %}
+  {% endif %}
 </head>

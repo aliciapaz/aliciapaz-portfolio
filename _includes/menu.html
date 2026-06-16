@@ -4,6 +4,16 @@
     {% for item in t.menu %}
       <a href="/{{ item.url }}">{{ item.name }}</a>
     {% endfor %}
+    {% comment %} Language switcher — static_href so polyglot does NOT re-localize these hrefs {% endcomment %}
+    {% assign unloc_url = page.url | remove_first: '/en' %}
+    {% if site.active_lang == site.default_lang %}
+      <span class="menu-lang menu-lang-active">ES</span>
+      {% capture en_url %}/en{{ unloc_url }}{% endcapture %}
+      <a class="menu-lang" {% static_href %}href="{{ en_url | absolute_url }}"{% endstatic_href %}>EN</a>
+    {% else %}
+      <a class="menu-lang" {% static_href %}href="{{ unloc_url | absolute_url }}"{% endstatic_href %}>ES</a>
+      <span class="menu-lang menu-lang-active">EN</span>
+    {% endif %}
   </nav>
   <nav class="social-icons">
     {% include social-icons.html %}

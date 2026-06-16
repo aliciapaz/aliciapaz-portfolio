@@ -64,6 +64,16 @@
   padding-right: 10px;
 }
 
+.menu-lang {
+  margin-left: 8px;
+  font-size: 0.85em;
+  text-transform: uppercase;
+}
+.menu-lang-active {
+  font-weight: bold;
+  opacity: 0.6;
+}
+
 .social-icons {
   float: right;
 }

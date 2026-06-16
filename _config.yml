@@ -17,7 +17,7 @@ paginate:            5
 markdown:            kramdown
 highlighter:         rouge
 permalink:           /:title
-plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
+plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag, jekyll-polyglot]
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
 title:		           'Alicia Paz'
@@ -27,3 +27,13 @@ author:              'Alicia Paz'
 # RSS 2.0 can be used instead of Atom by uncommenting following two lines
 #feed:
 #  path: rss-feed.xml
+
+# Site URL (needed for absolute_url under the GitHub Actions build)
+url:                 "https://www.aliciapaz.me"
+baseurl:             ""
+
+# Polyglot (i18n)
+languages:           ["es", "en"]
+default_lang:        "es"
+exclude_from_localization: ["assets", "CNAME", "favicon.ico", "rss-feed.xml", "robots.txt"]
+parallel_localization: false

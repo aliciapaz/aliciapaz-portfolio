@@ -2,6 +2,7 @@
 layout: page
 permalink: /about
 image: io.jpg
+lang: es
 ---
 
 Soy compositora y programadora nacida en Santiago de Chile. Me inspiro en la poesía y la naturaleza para crear sobre lo que me supera y me conmueve.

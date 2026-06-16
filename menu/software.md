@@ -2,6 +2,7 @@
 layout: page
 title: Software
 permalink: /software
+lang: es
 ---
 
 Hago aplicaciones web con  <a href="https://hi.teloslabs.co/" target="_blank">Telos Labs</a> desde 2021. Allí he desarrollado proyectos relacionados con agroecología, ciberseguridad y organizaciones sin fines de lucro.

@@ -2,6 +2,7 @@
 layout: page
 title: Música
 permalink: /music
+lang: es
 ---
 
 Haciendo música dialogo con el silencio, la paciencia y el asombro.

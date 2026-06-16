@@ -2,7 +2,7 @@
 layout: default
 ---
 {% if page.image %}
-  <img src="{{ site.github.url }}/assets/img/{{ page.image }}">
+  <img src="/assets/img/{{ page.image }}">
 {% endif %}
 <article>
   {{ content }}
@@ -10,15 +10,15 @@ layout: default
 {% for post in paginator.posts %}
   <div class="posts-container">
     <h1>
-      <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
+      <a href="{{ post.url }}">{{ post.title }}</a>
     </h1>
     {% if post.image %}
       <div class="thumbnail-container">
-        <a href="{{ site.github.url }}{{ post.url }}"><img src="{{ site.github.url }}/assets/img/{{ post.image }}"></a>
+        <a href="{{ post.url }}"><img src="/assets/img/{{ post.image }}"></a>
       </div>
     {% endif %}
     <p>
-      {{ post.content | strip_html | truncate: 350 }} <a href="{{ site.github.url }}{{ post.url }}">Read more</a>
+      {{ post.content | strip_html | truncate: 350 }} <a href="{{ post.url }}">Read more</a>
       <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date_to_string }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span>
     </p>
   </div>
@@ -28,12 +28,12 @@ layout: default
 {% if paginator.posts %}
   <div class="pagination">
     {% if paginator.next_page %}
-      <a class="pagination-button pagination-active next" href="{{ site.github.url }}{{ paginator.next_page_path }}">{{ site.data.settings.pagination.previous_page }}</a>
+      <a class="pagination-button pagination-active next" href="{{ paginator.next_page_path }}">{{ site.data.settings.pagination.previous_page }}</a>
     {% else %}
       <span class="pagination-button">{{ site.data.settings.pagination.previous_page }}</span>
     {% endif %}
     {% if paginator.previous_page %}
-      <a class="pagination-button pagination-active" href="{{ site.baseurl }}{{ paginator.previous_page_path }}">{{ site.data.settings.pagination.next_page }}</a>
+      <a class="pagination-button pagination-active" href="{{ paginator.previous_page_path }}">{{ site.data.settings.pagination.next_page }}</a>
     {% else %}
       <span class="pagination-button">{{ site.data.settings.pagination.next_page }}</span>
     {% endif %}

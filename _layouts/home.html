@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+{% assign t = site.data.translations[site.active_lang] %}
 {% if page.image %}
   <img src="/assets/img/{{ page.image }}">
 {% endif %}
@@ -18,7 +19,7 @@ layout: default
       </div>
     {% endif %}
     <p>
-      {{ post.content | strip_html | truncate: 350 }} <a href="{{ post.url }}">Read more</a>
+      {{ post.content | strip_html | truncate: 350 }} <a href="{{ post.url }}">{{ t.read_more }}</a>
       <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date_to_string }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span>
     </p>
   </div>
@@ -28,14 +29,14 @@ layout: default
 {% if paginator.posts %}
   <div class="pagination">
     {% if paginator.next_page %}
-      <a class="pagination-button pagination-active next" href="{{ paginator.next_page_path }}">{{ site.data.settings.pagination.previous_page }}</a>
+      <a class="pagination-button pagination-active next" href="{{ paginator.next_page_path }}">{{ t.pagination.previous_page }}</a>
     {% else %}
-      <span class="pagination-button">{{ site.data.settings.pagination.previous_page }}</span>
+      <span class="pagination-button">{{ t.pagination.previous_page }}</span>
     {% endif %}
     {% if paginator.previous_page %}
-      <a class="pagination-button pagination-active" href="{{ paginator.previous_page_path }}">{{ site.data.settings.pagination.next_page }}</a>
+      <a class="pagination-button pagination-active" href="{{ paginator.previous_page_path }}">{{ t.pagination.next_page }}</a>
     {% else %}
-      <span class="pagination-button">{{ site.data.settings.pagination.next_page }}</span>
+      <span class="pagination-button">{{ t.pagination.next_page }}</span>
     {% endif %}
   </div>
 {% endif %}

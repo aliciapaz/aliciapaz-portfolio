@@ -1,0 +1,21 @@
+es:
+  menu:
+    - { name: 'Sobre mí', url: 'about' }
+    - { name: 'Música',   url: 'music' }
+    - { name: 'Software', url: 'software' }
+  footer_made_by: 'Hecho a mano por mí'
+  read_more: 'Leer más'
+  pagination:
+    next_page: 'Más reciente'
+    previous_page: 'Más antiguo'
+
+en:
+  menu:
+    - { name: 'About',    url: 'about' }
+    - { name: 'Music',    url: 'music' }
+    - { name: 'Software', url: 'software' }
+  footer_made_by: 'Handmade by me'
+  read_more: 'Read more'
+  pagination:
+    next_page: 'Newer'
+    previous_page: 'Older'

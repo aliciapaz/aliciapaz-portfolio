@@ -1,7 +1,8 @@
+{% assign t = site.data.translations[site.active_lang] %}
 <div class="menu">
   <nav class="menu-content">
-    {% for item in site.data.settings.menu %}
-      <a href="{{ site.github.url }}/{{ item.url }}">{{ item.name }}</a>
+    {% for item in t.menu %}
+      <a href="/{{ item.url }}">{{ item.name }}</a>
     {% endfor %}
   </nav>
   <nav class="social-icons">

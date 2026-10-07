@@ -1,0 +1,22 @@
+{% assign t = site.data.translations[site.active_lang] %}
+<svg class="venn" viewBox="0 0 360 340" role="img" aria-label="{{ t.map_label }}">
+  <circle cx="125" cy="125" r="100" />
+  <circle cx="235" cy="125" r="100" />
+  <circle cx="180" cy="220" r="100" />
+  {% for item in t.menu limit: 3 %}
+    {% case item.url %}
+      {% when 'music' %}{% assign lx = 40 %}{% assign ly = 22 %}{% assign anchor = 'start' %}
+      {% when 'software' %}{% assign lx = 320 %}{% assign ly = 22 %}{% assign anchor = 'end' %}
+      {% else %}{% assign lx = 180 %}{% assign ly = 336 %}{% assign anchor = 'middle' %}
+    {% endcase %}
+    <text class="venn-field" x="{{ lx }}" y="{{ ly }}" text-anchor="{{ anchor }}">{{ item.name }}</text>
+  {% endfor %}
+  {% assign labels = include.notes | venn_labels %}
+  {% for label in labels %}
+    <a href="#note-{{ label.key }}">
+      <text class="venn-note" x="{{ label.x }}" y="{{ label.y }}" text-anchor="middle">
+        {% for line in label.lines %}<tspan x="{{ label.x }}" dy="{% if forloop.first %}0{% else %}12{% endif %}">{{ line }}</tspan>{% endfor %}
+      </text>
+    </a>
+  {% endfor %}
+</svg>

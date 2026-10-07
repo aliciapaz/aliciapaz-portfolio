@@ -1,0 +1,7 @@
+# Homepage text. Replace every "[ES: escribe aquí]" / "[EN: write here]".
+# The longer intro paragraph lives in index.html (ES) and index-en.html (EN).
+es:
+  roles: '[ES: escribe aquí]'
+
+en:
+  roles: '[EN: write here]'

@@ -2,41 +2,29 @@
 layout: default
 ---
 {% assign t = site.data.translations[site.active_lang] %}
-{% if page.image %}
-  <img src="/assets/img/{{ page.image }}">
-{% endif %}
-<article>
-  {{ content }}
-</article>
-{% for post in paginator.posts %}
-  <div class="posts-container">
-    <h1>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </h1>
-    {% if post.image %}
-      <div class="thumbnail-container">
-        <a href="{{ post.url }}"><img src="/assets/img/{{ post.image }}"></a>
-      </div>
-    {% endif %}
-    <p>
-      {{ post.content | strip_html | truncate: 350 }} <a href="{{ post.url }}">{{ t.read_more }}</a>
-      <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date_to_string }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span>
-    </p>
+{% assign home = site.data.home[site.active_lang] %}
+{% assign notes = site.notes | where: "lang", site.active_lang %}
+<section class="hero">
+  <canvas data-roots="hero" aria-hidden="true"></canvas>
+  <div class="hero-text">
+    <h1 class="name">{{ site.title }}</h1>
+    <p class="roles">{{ home.roles }}</p>
   </div>
-{% endfor %}
-
-<!-- Pagination links -->
-{% if paginator.posts %}
-  <div class="pagination">
-    {% if paginator.next_page %}
-      <a class="pagination-button pagination-active next" href="{{ paginator.next_page_path }}">{{ t.pagination.previous_page }}</a>
-    {% else %}
-      <span class="pagination-button">{{ t.pagination.previous_page }}</span>
-    {% endif %}
-    {% if paginator.previous_page %}
-      <a class="pagination-button pagination-active" href="{{ paginator.previous_page_path }}">{{ t.pagination.next_page }}</a>
-    {% else %}
-      <span class="pagination-button">{{ t.pagination.next_page }}</span>
-    {% endif %}
+</section>
+<div class="wrap">
+  <div class="intro">
+    {{ content }}
   </div>
-{% endif %}
+  {% include sections-nav.html %}
+  <figure class="map" data-notes-graph>
+    {% include venn.html notes=notes %}
+  </figure>
+  {% include notes-list.html %}
+</div>
+<script type="application/json" id="notes-data">
+  {
+    "fields": [{% for item in t.menu limit: 3 %}{ "id": {{ item.url | jsonify }}, "name": {{ item.name | jsonify }} }{% unless forloop.last %},{% endunless %}{% endfor %}],
+    "notes": [{% for note in notes %}{ "id": {{ note.key | jsonify }}, "title": {{ note.title | jsonify }}, "fields": {{ note.fields | jsonify }}, "related": {{ note.related | jsonify }} }{% unless forloop.last %},{% endunless %}{% endfor %}]
+  }
+</script>
+<script src="/assets/js/notes-graph.js" defer></script>

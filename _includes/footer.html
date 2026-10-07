@@ -1,4 +1,7 @@
 <footer class="footer">
-  {% include social-icons.html %}
-  <div class="footer-description"><a href="/">{{ site.data.translations[site.active_lang].footer_made_by }}</a></div>
+  {% for item in site.data.settings.social %}
+    <a href="{{ item.link }}" aria-label="{{ item.label }}"{% unless item.icon == 'email' %} target="_blank" rel="noopener"{% endunless %}>
+      {% include icons/{{ item.icon }}.svg %}
+    </a>
+  {% endfor %}
 </footer>

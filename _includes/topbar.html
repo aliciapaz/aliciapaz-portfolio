@@ -1,0 +1,15 @@
+{% assign unloc_url = page.url | remove_first: '/en' %}
+<header class="topbar">
+  <a class="topbar-home" href="/">{{ site.title | downcase }}</a>
+  {% comment %} static_href so polyglot does not re-localize the switcher links {% endcomment %}
+  <nav class="lang" aria-label="Idioma / Language">
+    {% if site.active_lang == site.default_lang %}
+      <span class="lang-active" aria-current="true">ES</span> |
+      {% capture en_url %}/en{{ unloc_url }}{% endcapture %}
+      <a {% static_href %}href="{{ en_url }}"{% endstatic_href %} hreflang="en" lang="en">EN</a>
+    {% else %}
+      <a {% static_href %}href="{{ unloc_url }}"{% endstatic_href %} hreflang="es" lang="es">ES</a> |
+      <span class="lang-active" aria-current="true">EN</span>
+    {% endif %}
+  </nav>
+</header>

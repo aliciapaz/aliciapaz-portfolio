@@ -1,0 +1,6 @@
+<nav class="sections">
+  {% for item in site.data.translations[site.active_lang].menu %}
+    {% capture item_url %}/{{ item.url }}{% endcapture %}
+    <a href="{{ item_url }}"{% if page.permalink == item_url %} aria-current="page"{% endif %}>{{ item.name }}</a>
+  {% endfor %}
+</nav>

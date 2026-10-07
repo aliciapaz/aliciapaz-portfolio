@@ -1,13 +1,24 @@
 ---
 layout: default
 ---
-
-<h1>
-  {{ page.title }}
-</h1>
-{% if page.image %}
-  <img src="/assets/img/{{ page.image }}">
-{% endif %}
-<article>
-  {{ content }}
-</article>
+{% assign t = site.data.translations[site.active_lang] %}
+<canvas class="strip" data-roots="strip" aria-hidden="true"></canvas>
+<div class="wrap">
+  {% include sections-nav.html %}
+  {% for item in t.menu %}
+    {% capture item_url %}/{{ item.url }}{% endcapture %}
+    {% if page.permalink == item_url %}
+      <p class="tag">0{{ forloop.index }} · {{ item.name }}</p>
+    {% endif %}
+  {% endfor %}
+  <h1 class="page-title">{{ page.title }}</h1>
+  {% if page.image %}
+    <img class="page-image" src="/assets/img/{{ page.image }}" alt="">
+  {% endif %}
+  <article class="prose">
+    {{ content }}
+  </article>
+  {% if page.field %}
+    {% include notes-list.html field=page.field %}
+  {% endif %}
+</div>

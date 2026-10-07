@@ -1,46 +1,21 @@
 <head>
-  <title>
-    {% if page.title == "Home" %}
-      {{ site.title }} | {{ site.description }}
-    {% else %}
-      {{ page.title }} | {{ site.title }}
-    {% endif %}
-  </title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Lora:ital,wght@0,400;0,600;1,400&display=swap">
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="stylesheet" href="/assets/css/syntax.css">
-  <!-- Use Atom -->
-  {% feed_meta %}
-  <!-- Use RSS-2.0 -->
-  <!--<link href="{{ site.github.url }}/rss-feed.xml" type="application/rss+xml" rel="alternate" title="{{ site.title }} | {{ site.description }}"/>
-  //-->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script type="text/javascript" async
-    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-    MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']]
-        }
-      });
-  </script>
-  <!-- Google Analytics -->
-  {% include google-analytics.html %}
-  <!-- Use Jekyll SEO plugin -->
+  <script src="/assets/js/roots.js" defer></script>
   {% seo %}
   {% comment %} Bilingual hreflang alternates {% endcomment %}
-  {% if site.active_lang %}
-    {% assign neutral_url = page.url | remove_first: '/en' %}
-    {% for lang in site.languages %}
-      {% if lang == site.default_lang %}
-        <link rel="alternate" hreflang="{{ lang }}" href="{{ neutral_url | absolute_url }}" />
-      {% else %}
-        {% capture lang_url %}/{{ lang }}{{ neutral_url }}{% endcapture %}
-        <link rel="alternate" hreflang="{{ lang }}" {% static_href %}href="{{ lang_url | absolute_url }}"{% endstatic_href %} />
-      {% endif %}
-    {% endfor %}
-  {% endif %}
+  {% assign neutral_url = page.url | remove_first: '/en' %}
+  {% for lang in site.languages %}
+    {% if lang == site.default_lang %}
+      <link rel="alternate" hreflang="{{ lang }}" href="{{ neutral_url | absolute_url }}" />
+    {% else %}
+      {% capture lang_url %}/{{ lang }}{{ neutral_url }}{% endcapture %}
+      <link rel="alternate" hreflang="{{ lang }}" {% static_href %}href="{{ lang_url | absolute_url }}"{% endstatic_href %} />
+    {% endif %}
+  {% endfor %}
 </head>

@@ -1,3 +1,6 @@
+contact:
+  email: 'aliciapazrojas@gmail.com'
+
 social:
   - { icon: 'email',    label: 'Email',    link: 'mailto:aliciapazrojas@gmail.com' }
   - { icon: 'github',   label: 'GitHub',   link: 'https://github.com/aliciapaz' }

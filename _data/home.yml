@@ -1,4 +1,4 @@
-# Homepage text. Replace every "[ES: escribe aquí]" / "[EN: write here]".
+# Homepage text. Replace every bracketed placeholder (see README).
 # Wrap one word of the offer line in <em> to show it in the accent color.
 es:
   offer: '[ES: escribe aquí]'

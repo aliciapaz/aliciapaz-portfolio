@@ -1,0 +1,5 @@
+{% capture b %}/assets/{{ include.base }}{% endcapture %}
+<picture class="{{ include.class }}">
+  <source type="image/webp" srcset="{{ b }}-800.webp 800w, {{ b }}-1600.webp 1600w" sizes="{{ include.sizes | default: '100vw' }}">
+  <img src="{{ b }}-800.jpg" srcset="{{ b }}-800.jpg 800w, {{ b }}-1600.jpg 1600w" sizes="{{ include.sizes | default: '100vw' }}" alt="{{ include.alt | escape }}"{% unless include.eager %} loading="lazy"{% endunless %} decoding="async">
+</picture>

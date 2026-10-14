@@ -1,0 +1,45 @@
+---
+layout: default
+---
+{% assign t = site.data.translations[site.active_lang] %}
+{% assign works = site.works | where: "lang", site.active_lang | sort: "order" %}
+{% for w in works %}{% if w.url == page.url %}{% assign i = forloop.index0 %}{% endif %}{% endfor %}
+{% assign prev_i = i | minus: 1 %}
+{% assign next_i = i | plus: 1 %}
+<article class="work">
+  {% if page.cover %}
+    {% include picture.html base=page.cover alt=page.cover_alt class="work-cover" eager=true %}
+  {% else %}
+    <div class="work-cover placeholder"></div>
+  {% endif %}
+  {% if page.audio %}{% include audio.html src=page.audio label=page.audio_label %}{% endif %}
+  <div class="wrap">
+    <p class="tag label"><span class="accent">{{ page.discipline }}</span> · {{ page.year }}</p>
+    <h1 class="work-title">{{ page.title }}</h1>
+    <dl class="facts">
+      {% if page.client %}<dt class="label">{{ t.client }}</dt><dd>{{ page.client }}</dd>{% endif %}
+      {% if page.role %}<dt class="label">{{ t.role }}</dt><dd>{{ page.role }}</dd>{% endif %}
+      {% if page.duration %}<dt class="label">{{ t.duration }}</dt><dd>{{ page.duration }}</dd>{% endif %}
+    </dl>
+    <div class="prose">{{ content }}</div>
+    {% if page.photos.size > 0 %}
+      <div class="photos">
+        {% for p in page.photos %}
+          <figure>
+            {% include picture.html base=p.src alt=p.alt sizes="(min-width: 40rem) 17em, 50vw" %}
+            {% if p.credit %}<figcaption>{{ p.credit }}</figcaption>{% endif %}
+          </figure>
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% if page.video %}{% include video.html video=page.video %}{% endif %}
+    {% if page.credits %}<p class="credits">{{ page.credits }}</p>{% endif %}
+    {% include cta.html %}
+    <nav class="pager">
+      {% if i > 0 %}<a href="{{ works[prev_i].url }}">← {{ t.prev }}</a>{% else %}<span></span>{% endif %}
+      {% if next_i < works.size %}<a href="{{ works[next_i].url }}">{{ t.next }} →</a>{% endif %}
+    </nav>
+  </div>
+</article>
+<script src="/assets/js/audio.js" defer></script>
+<script src="/assets/js/video.js" defer></script>

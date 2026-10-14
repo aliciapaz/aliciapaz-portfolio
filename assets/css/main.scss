@@ -169,3 +169,125 @@ picture img { width: 100%; height: 100%; object-fit: cover; }
 
 .footer a { display: inline-flex; padding: .25rem; }
 .footer-email { font-size: .8125rem; user-select: all; }
+
+/* Work page */
+
+.work-cover {
+  max-width: 60rem;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+}
+
+.player {
+  max-width: var(--column);
+  margin: 0 auto;
+  padding: 1rem var(--gutter) 0;
+}
+
+.player audio { width: 100%; }
+
+.player-ui {
+  display: flex;
+  align-items: center;
+  gap: .9rem;
+  padding: .75rem;
+  border: 1px solid var(--rule);
+}
+
+.player-ui[hidden] { display: none; }
+
+.player-toggle {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  border-radius: 50%;
+  background: var(--light);
+  color: var(--ground);
+  cursor: pointer;
+}
+
+.player-toggle svg { width: 1rem; height: 1rem; }
+.icon-pause,
+.is-playing .icon-play { display: none; }
+.is-playing .icon-pause { display: block; }
+
+.player-meta { flex: 1; min-width: 0; }
+.player-label { display: block; margin-bottom: .35rem; color: var(--muted); }
+.player-seek { width: 100%; margin: 0; accent-color: var(--light); }
+
+.work .tag { margin-top: 2rem; }
+.work-title { font-size: clamp(2rem, 7vw, 2.75rem); margin-bottom: 1.25rem; }
+
+.facts {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: .4rem 1.25rem;
+  margin: 0 0 2rem;
+  font-size: .875rem;
+}
+
+.facts dt { padding-top: .15rem; color: var(--muted); }
+.facts dd { margin: 0; }
+
+.photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .5rem;
+  margin: 2rem 0;
+}
+
+.photos figure { margin: 0; }
+.photos picture { aspect-ratio: 1; }
+.photos figcaption { margin-top: .3rem; color: var(--muted); font-size: .6875rem; }
+
+.video { margin: 2rem 0; }
+
+.video-facade,
+.video iframe {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  text-decoration: none;
+}
+
+.video-facade picture { position: absolute; inset: 0; }
+
+.video-play {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+.video-play svg {
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: .85rem;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+}
+
+.credits {
+  margin: 2rem 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: .8125rem;
+  line-height: 1.8;
+}
+
+.pager {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: .8125rem;
+}
+
+.pager a { text-decoration: none; }

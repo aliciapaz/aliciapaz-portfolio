@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Usage: script/photo <source.jpg> <assets/works/slug/name>
+# Writes name-800.jpg, name-1600.jpg, name-800.webp, name-1600.webp
+set -euo pipefail
+src=$1
+base=$2
+mkdir -p "$(dirname "$base")"
+for width in 800 1600; do
+  magick "$src" -auto-orient -strip -resize "${width}x>" -quality 82 "$base-$width.jpg"
+  magick "$src" -auto-orient -strip -resize "${width}x>" -quality 80 "$base-$width.webp"
+done

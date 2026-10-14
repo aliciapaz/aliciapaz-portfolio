@@ -12,10 +12,10 @@ url:                 "https://www.aliciapaz.me"
 baseurl:             ""
 
 collections:
-  notes:
-    output: false
+  works:
+    output: true
 
-exclude:             ["README.md", "LICENSE", "Gemfile", "Gemfile.lock", ".tool-versions", "vendor"]
+exclude:             ["README.md", "LICENSE", "Gemfile", "Gemfile.lock", ".tool-versions", "vendor", "script", "docs"]
 
 # Polyglot (i18n)
 languages:           ["es", "en"]

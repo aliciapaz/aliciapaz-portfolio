@@ -36,7 +36,7 @@ someone commissioning music.
 | `/about` | `/en/about` | Composer bio first, then the engineering and software background, talks and other work as links |
 | 404 | 404 | Restyled |
 
-Navigation: `obras · sobre mí · contacto` / `works · about · contact`. "obras" links to the works on the homepage
+Navigation: `obras · sobre mí · contacto` / `works · about · contact`, as a row under the name and language switch. "obras" links to the works on the homepage
 (`/#obras`); "contacto" is the `mailto:` link.
 
 ### Removed
@@ -66,16 +66,16 @@ title: "..."
 order: 1                  # homepage order
 year: 2024
 discipline: "Danza"       # shown as the accent tag
-for: "Compañía, ciudad"   # who commissioned it
+client: "Compañía, ciudad"  # who commissioned it (`for` is a Liquid keyword)
 role: "Composición y diseño sonoro"
 duration: "12 min"        # optional
-cover: works/<slug>/cover.jpg
+cover: works/<slug>/cover   # base path; script/photo makes -800/-1600 .jpg/.webp
 cover_alt: "..."
 audio: works/<slug>/excerpt.mp3
 audio_label: "Fragmento, 3 min"
-video: https://vimeo.com/...   # optional, only if shareable
+video: { platform: vimeo, id: "...", still: works/<slug>/still }  # optional, only if shareable
 photos:                         # optional
-  - { src: works/<slug>/1.jpg, alt: "...", credit: "..." }
+  - { src: works/<slug>/1, alt: "...", credit: "..." }
 credits: "Coreografía: ... · Intérpretes: ... · Foto: ..."
 lang: es
 ```
@@ -83,7 +83,7 @@ lang: es
 Body: Alicia's text about the piece.
 
 Media files live in `assets/works/<slug>/`. Audio is MP3, about 3 MB per excerpt. Images are JPEG plus WebP at
-two widths (800, 1600).
+two widths (800, 1600), generated from one source photo by `script/photo`.
 
 `_data/home.yml` per language: `offer` (the offer line), `own_projects` (2 to 3 rows of `title`, `note`, `url`).
 `_data/settings.yml` holds the contact email and the prefilled subject per language.
@@ -112,7 +112,7 @@ two widths (800, 1600).
 2. Offer line in Fraunces with one word in `--light`, then the "Escríbeme" button (`mailto:`).
 3. `#obras`: every work as a full-width card in `order`: 4:5 cover, discipline tag, year, title. Links to the work page.
 4. "Proyectos propios": compact rows from `_data/home.yml`, each an external link.
-5. Footer: contact icons (email, LinkedIn, YouTube) as inline SVG.
+5. Footer: the existing contact icons (email, GitHub, LinkedIn) as inline SVG, plus the email address as text.
 
 ### Work page
 

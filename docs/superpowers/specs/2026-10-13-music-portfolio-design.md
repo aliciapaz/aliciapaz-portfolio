@@ -110,7 +110,7 @@ two widths (800, 1600), generated from one source photo by `script/photo`.
 
 1. Top bar: `Alicia Paz` (home link) left, `ES · EN` right, active language in `--light`.
 2. Offer line in Fraunces with one word in `--light`, then the "Escríbeme" button (`mailto:`).
-3. `#obras`: every work as a full-width card in `order`: 4:5 cover, discipline tag, year, title. Links to the work page.
+3. `#obras`: every work as a full-width card in `order` (three columns from 60rem, where the homepage column widens to 60rem): 4:5 cover, discipline tag, year, title. Links to the work page.
 4. "Proyectos propios": compact rows from `_data/home.yml`, each an external link.
 5. Footer: the existing contact icons (email, GitHub, LinkedIn) as inline SVG, plus the email address as text.
 

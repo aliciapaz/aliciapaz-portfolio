@@ -323,3 +323,10 @@ picture img { width: 100%; height: 100%; object-fit: cover; }
 .own li { padding: .75rem 0; border-bottom: 1px solid var(--rule); }
 .own li a { text-decoration: none; }
 .own li span { display: block; color: var(--muted); font-size: .875rem; }
+
+@media (min-width: 60rem) {
+  .layout-home { --column: 60rem; }
+  .offer-line { max-width: 18em; }
+  .works { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .work-card-title { font-size: 1.5rem; }
+}

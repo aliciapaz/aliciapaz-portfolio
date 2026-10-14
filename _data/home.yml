@@ -1,7 +1,13 @@
 # Homepage text. Replace every "[ES: escribe aquí]" / "[EN: write here]".
-# The longer intro paragraph lives in index.html (ES) and index-en.html (EN).
+# Wrap one word of the offer line in <em> to show it in the accent color.
 es:
-  roles: '[ES: escribe aquí]'
+  offer: '[ES: escribe aquí]'
+  own_projects:
+    - { title: 'Annarresti', url: 'https://annarresti.bandcamp.com/album/annarresti', note: 'Mi proyecto de cantautora.' }
+    - { title: 'SoundCloud', url: 'https://soundcloud.com/annarresti', note: 'Mi repositorio de experimentos y maquetas caseras.' }
 
 en:
-  roles: '[EN: write here]'
+  offer: '[EN: write here]'
+  own_projects:
+    - { title: 'Annarresti', url: 'https://annarresti.bandcamp.com/album/annarresti', note: '[EN: write here]' }
+    - { title: 'SoundCloud', url: 'https://soundcloud.com/annarresti', note: 'My repository of experiments and home demos.' }

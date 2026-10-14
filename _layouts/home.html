@@ -1,6 +1,38 @@
 ---
 layout: default
 ---
+{% assign t = site.data.translations[site.active_lang] %}
+{% assign home = site.data.home[site.active_lang] %}
+{% assign works = site.works | where: "lang", site.active_lang | sort: "order" %}
 <div class="wrap">
-  {{ content }}
+  <section class="offer">
+    <h1 class="offer-line">{{ home.offer }}</h1>
+    <a class="button" href="{% include mailto.html %}">{{ t.write }}</a>
+  </section>
+
+  <section id="obras" class="works" aria-label="{{ t.works }}">
+    {% for w in works %}
+      <a class="work-card" href="{{ w.url }}">
+        {% if w.cover %}
+          {% include picture.html base=w.cover alt=w.cover_alt class="work-card-image" sizes="(min-width: 40rem) 34em, 100vw" %}
+        {% else %}
+          <div class="work-card-image placeholder"></div>
+        {% endif %}
+        <p class="tag label"><span class="accent">{{ w.discipline }}</span> · {{ w.year }}</p>
+        <h2 class="work-card-title">{{ w.title }}</h2>
+      </a>
+    {% endfor %}
+  </section>
+
+  <section class="own">
+    <h2 class="own-title">{{ t.own }}</h2>
+    <ul>
+      {% for p in home.own_projects %}
+        <li>
+          <a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.title }} ↗</a>
+          <span>{{ p.note }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
 </div>

@@ -291,3 +291,35 @@ picture img { width: 100%; height: 100%; object-fit: cover; }
 }
 
 .pager a { text-decoration: none; }
+
+/* Home */
+
+.offer { padding: 2.5rem 0 1rem; }
+.offer-line { font-size: clamp(2.125rem, 8vw, 3.25rem); margin-bottom: 1.5rem; }
+.offer-line em { color: var(--light); }
+
+.works {
+  display: grid;
+  gap: 2.5rem;
+  margin: 3rem 0;
+  scroll-margin-top: 1rem;
+}
+
+.work-card { display: block; text-decoration: none; }
+.work-card-image { aspect-ratio: 4 / 5; margin-bottom: .9rem; }
+.work-card-title { font-size: 1.75rem; }
+.work-card:hover .work-card-title { color: var(--light); }
+
+.own { padding-top: 1.5rem; border-top: 1px solid var(--rule); }
+
+.own-title {
+  margin: 0 0 .5rem;
+  font-family: var(--display);
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.own ul { margin: 0; padding: 0; list-style: none; }
+.own li { padding: .75rem 0; border-bottom: 1px solid var(--rule); }
+.own li a { text-decoration: none; }
+.own li span { display: block; color: var(--muted); font-size: .875rem; }

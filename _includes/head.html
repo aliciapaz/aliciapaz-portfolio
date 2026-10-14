@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Work+Sans:wght@400;500&display=swap">
   <link rel="stylesheet" href="/assets/css/main.css">
   {% seo %}
-  {% comment %} Bilingual hreflang alternates {% endcomment %}
   {% assign neutral_url = page.url | remove_first: '/en' %}
   {% for lang in site.languages %}
     {% if lang == site.default_lang %}

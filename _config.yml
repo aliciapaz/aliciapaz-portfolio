@@ -17,7 +17,6 @@ collections:
 
 exclude:             ["README.md", "LICENSE", "Gemfile", "Gemfile.lock", ".tool-versions", "vendor", "script", "docs"]
 
-# Polyglot (i18n)
 languages:           ["es", "en"]
 default_lang:        "es"
 exclude_from_localization: ["assets", "CNAME", "favicon.ico", "robots.txt"]

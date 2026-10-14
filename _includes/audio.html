@@ -1,0 +1,13 @@
+{% assign t = site.data.translations[site.active_lang] %}
+<div class="player" data-player>
+  <audio src="/assets/{{ include.src }}" preload="metadata" controls></audio>
+  <div class="player-ui" hidden>
+    <button type="button" class="player-toggle" aria-label="{{ t.play }}" data-label-play="{{ t.play }}" data-label-pause="{{ t.pause }}">
+      {% include icons/play.svg %}{% include icons/pause.svg %}
+    </button>
+    <div class="player-meta">
+      <span class="player-label label">{{ include.label }}</span>
+      <input class="player-seek" type="range" min="0" max="100" step="0.1" value="0" aria-label="{{ t.seek }}">
+    </div>
+  </div>
+</div>

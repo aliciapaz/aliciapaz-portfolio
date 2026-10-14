@@ -1,0 +1,13 @@
+# Homepage text. Replace every bracketed placeholder (see README).
+# Wrap one word of the offer line in <em> to show it in the accent color.
+es:
+  offer: '[ES: escribe aquí]'
+  own_projects:
+    - { title: 'Annarresti', url: 'https://annarresti.bandcamp.com/album/annarresti', note: 'Mi proyecto de cantautora.' }
+    - { title: 'SoundCloud', url: 'https://soundcloud.com/annarresti', note: 'Mi repositorio de experimentos y maquetas caseras.' }
+
+en:
+  offer: '[EN: write here]'
+  own_projects:
+    - { title: 'Annarresti', url: 'https://annarresti.bandcamp.com/album/annarresti', note: '[EN: write here]' }
+    - { title: 'SoundCloud', url: 'https://soundcloud.com/annarresti', note: 'My repository of experiments and home demos.' }

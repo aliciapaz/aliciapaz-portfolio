@@ -1,41 +1,38 @@
 ---
 layout: default
 ---
-{% if page.image %}
-  <img src="{{ site.github.url }}/assets/img/{{ page.image }}">
-{% endif %}
-<article>
-  {{ content }}
-</article>
-{% for post in paginator.posts %}
-  <div class="posts-container">
-    <h1>
-      <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
-    </h1>
-    {% if post.image %}
-      <div class="thumbnail-container">
-        <a href="{{ site.github.url }}{{ post.url }}"><img src="{{ site.github.url }}/assets/img/{{ post.image }}"></a>
-      </div>
-    {% endif %}
-    <p>
-      {{ post.content | strip_html | truncate: 350 }} <a href="{{ site.github.url }}{{ post.url }}">Read more</a>
-      <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date_to_string }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span>
-    </p>
-  </div>
-{% endfor %}
+{% assign t = site.data.translations[site.active_lang] %}
+{% assign home = site.data.home[site.active_lang] %}
+{% assign works = site.works | where: "lang", site.active_lang | sort: "order" %}
+<div class="wrap">
+  <section class="offer">
+    <h1 class="offer-line">{{ home.offer }}</h1>
+    <a class="button" href="{% include mailto.html %}">{{ t.write }}</a>
+  </section>
 
-<!-- Pagination links -->
-{% if paginator.posts %}
-  <div class="pagination">
-    {% if paginator.next_page %}
-      <a class="pagination-button pagination-active next" href="{{ site.github.url }}{{ paginator.next_page_path }}">{{ site.data.settings.pagination.previous_page }}</a>
-    {% else %}
-      <span class="pagination-button">{{ site.data.settings.pagination.previous_page }}</span>
-    {% endif %}
-    {% if paginator.previous_page %}
-      <a class="pagination-button pagination-active" href="{{ site.baseurl }}{{ paginator.previous_page_path }}">{{ site.data.settings.pagination.next_page }}</a>
-    {% else %}
-      <span class="pagination-button">{{ site.data.settings.pagination.next_page }}</span>
-    {% endif %}
-  </div>
-{% endif %}
+  <section id="obras" class="works" aria-label="{{ t.works }}">
+    {% for w in works %}
+      <a class="work-card" href="{{ w.url }}">
+        {% if w.cover %}
+          {% include picture.html base=w.cover alt=w.cover_alt class="work-card-image" sizes="(min-width: 40rem) 34em, 100vw" %}
+        {% else %}
+          <div class="work-card-image placeholder"></div>
+        {% endif %}
+        <p class="tag label"><span class="accent">{{ w.discipline }}</span> · {{ w.year }}</p>
+        <h2 class="work-card-title">{{ w.title }}</h2>
+      </a>
+    {% endfor %}
+  </section>
+
+  <section class="own">
+    <h2 class="own-title">{{ t.own }}</h2>
+    <ul>
+      {% for p in home.own_projects %}
+        <li>
+          <a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.title }} ↗</a>
+          <span>{{ p.note }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+</div>

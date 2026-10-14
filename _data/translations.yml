@@ -1,0 +1,41 @@
+es:
+  menu:
+    - { name: 'obras',    url: '/#obras' }
+    - { name: 'sobre mí', url: '/about' }
+  contact: 'contacto'
+  nav_label: 'Navegación'
+  write: 'Escríbeme'
+  mail_subject: 'Encargo de obra'
+  cta: '¿Tienes una obra en proceso?'
+  works: 'Obras'
+  own: 'Proyectos propios'
+  client: 'Para'
+  role: 'Rol'
+  duration: 'Duración'
+  watch: 'Ver fragmento'
+  play: 'Reproducir'
+  pause: 'Pausar'
+  seek: 'Posición'
+  prev: 'Anterior'
+  next: 'Siguiente'
+
+en:
+  menu:
+    - { name: 'works', url: '/#obras' }
+    - { name: 'about', url: '/about' }
+  contact: 'contact'
+  nav_label: 'Navigation'
+  write: 'Write to me'
+  mail_subject: 'Music commission'
+  cta: 'Working on a new piece?'
+  works: 'Works'
+  own: 'Own projects'
+  client: 'For'
+  role: 'Role'
+  duration: 'Duration'
+  watch: 'Watch excerpt'
+  play: 'Play'
+  pause: 'Pause'
+  seek: 'Position'
+  prev: 'Previous'
+  next: 'Next'

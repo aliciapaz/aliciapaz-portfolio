@@ -1,0 +1,15 @@
+{% assign t = site.data.translations[site.active_lang] %}
+{% assign v = include.video %}
+{% if v.platform == "vimeo" %}
+  {% capture watch %}https://vimeo.com/{{ v.id }}{% endcapture %}
+  {% capture embed %}https://player.vimeo.com/video/{{ v.id }}?autoplay=1&dnt=1{% endcapture %}
+{% else %}
+  {% capture watch %}https://www.youtube.com/watch?v={{ v.id }}{% endcapture %}
+  {% capture embed %}https://www.youtube-nocookie.com/embed/{{ v.id }}?autoplay=1{% endcapture %}
+{% endif %}
+<figure class="video">
+  <a class="video-facade placeholder" href="{{ watch }}" target="_blank" rel="noopener" data-embed="{{ embed }}">
+    {% if v.still %}{% include picture.html base=v.still alt="" sizes="(min-width: 40rem) 34em, 100vw" %}{% endif %}
+    <span class="video-play label">{% include icons/play.svg %}<span>{{ t.watch }}</span></span>
+  </a>
+</figure>

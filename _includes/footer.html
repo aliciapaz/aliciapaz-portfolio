@@ -1,4 +1,8 @@
 <footer class="footer">
-  {% include social-icons.html %}
-  <div class="footer-description"><a href="{{ site.github.url }}/">Hecho a mano por mí </a></div>
+  {% for item in site.data.settings.social %}
+    <a href="{{ item.link }}" aria-label="{{ item.label }}"{% unless item.icon == 'email' %} target="_blank" rel="noopener"{% endunless %}>
+      {% include icons/{{ item.icon }}.svg %}
+    </a>
+  {% endfor %}
+  <span class="footer-email">{{ site.data.settings.contact.email }}</span>
 </footer>

@@ -5,3 +5,6 @@ Gemfile.lock
 .jekyll-metadata
 .DS_Store
 .jekyll-cache
+.worktrees
+.superpowers/
+.gstack/

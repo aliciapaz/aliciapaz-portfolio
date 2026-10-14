@@ -1,34 +1,19 @@
 <head>
-  <title>
-    {% if page.title == "Home" %}
-      {{ site.title }} | {{ site.description }}
-    {% else %}
-      {{ page.title }} | {{ site.title }}
-    {% endif %}
-  </title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
-  <link rel="stylesheet" href="{{ site.github.url }}/assets/css/main.css">
-  <link rel="stylesheet" href="{{ site.github.url }}/assets/css/syntax.css">
-  <!-- Use Atom -->
-  {% feed_meta %}
-  <!-- Use RSS-2.0 -->
-  <!--<link href="{{ site.github.url }}/rss-feed.xml" type="application/rss+xml" rel="alternate" title="{{ site.title }} | {{ site.description }}"/>
-  //-->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script type="text/javascript" async
-    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-    MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']]
-        }
-      });
-  </script>
-  <!-- Google Analytics -->
-  {% include google-analytics.html %}
-  <!-- Use Jekyll SEO plugin -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Work+Sans:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/assets/css/main.css">
   {% seo %}
+  {% assign neutral_url = page.url | remove_first: '/en' %}
+  {% for lang in site.languages %}
+    {% if lang == site.default_lang %}
+      <link rel="alternate" hreflang="{{ lang }}" href="{{ neutral_url | absolute_url }}" />
+    {% else %}
+      {% capture lang_url %}/{{ lang }}{{ neutral_url }}{% endcapture %}
+      <link rel="alternate" hreflang="{{ lang }}" {% static_href %}href="{{ lang_url | absolute_url }}"{% endstatic_href %} />
+    {% endif %}
+  {% endfor %}
 </head>
